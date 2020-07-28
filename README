@@ -1,5 +1,5 @@
-Prepare downstream with downloading all required softwares and pipelines.
-List of pipelines
+1. Prepare downstream with downloading all required softwares and pipelines.
+-List of pipelines
   -FASTQC
   -MultiQC
   -Hisat
@@ -10,3 +10,12 @@ $Unzip command
 $tar -jxvf <filename.bz2>
 $tar -zxf <filename.zip>
 $Unzip <filename.zip>
+
+2. RUN FastQC with all fastq files:
+
+$fastqc -t 6 *.fastq.gz
+
+3. RUN MultiQC-master
+$multiqc .
+
+4. 
