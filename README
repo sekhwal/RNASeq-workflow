@@ -1,1 +1,12 @@
-
+Prepare downstream with downloading all required softwares and pipelines.
+List of pipelines
+  -FASTQC
+  -MultiQC
+  -Hisat
+  -Samtools
+  -picard
+  -subread
+$Unzip command
+$tar -jxvf <filename.bz2>
+$tar -zxf <filename.zip>
+$Unzip <filename.zip>
