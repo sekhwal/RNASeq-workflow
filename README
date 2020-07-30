@@ -10,6 +10,7 @@ $Unzip command
 $tar -jxvf <filename.bz2>
 $tar -zxf <filename.zip>
 $Unzip <filename.zip>
+$gunzip <filename.gz>
 
 2. RUN FastQC with all fastq files:
 
