@@ -19,4 +19,10 @@ $fastqc -t 6 *.fastq.gz
 3. RUN MultiQC-master
 $multiqc .
 
-4. 
+4. STAR Alignment
+-Download STAR larest version (https://github.com/alexdobin/STAR/releases)
+-Extract the file and compile with following commands
+$cd STAR/source
+$make STAR
+Add to the directory
+$export PATH=$PATH:/Home/pipelines/
