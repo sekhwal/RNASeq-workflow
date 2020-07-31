@@ -26,3 +26,15 @@ $cd STAR/source
 $make STAR
 Add to the directory
 $export PATH=$PATH:/Home/pipelines/
+---Alternatively:
+-Get latest STAR source from releases
+wget https://github.com/alexdobin/STAR/archive/2.7.5a.tar.gz
+tar -xzf 2.7.5a.tar.gz
+cd STAR-2.7.5a
+
+# Alternatively, get STAR source using git
+git clone https://github.com/alexdobin/STAR.git
+
+# Compile
+cd STAR/source
+make STAR
