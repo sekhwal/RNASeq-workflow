@@ -1,3 +1,5 @@
+Method 1. Alignment based Method
+
 1. Prepare downstream with downloading all required softwares and pipelines.
 -List of pipelines
   -FASTQC
@@ -46,3 +48,13 @@ $./STAR --runThreadN 8 --runMode genomeGenerate --genomeDir /DataAnalysis/data/t
 
 $./STAR --runMode alignReads --outSAMtype BAM Unsorted --genomeDir /DataAnalysis/data/STAR/pipelines/ --outFileNamePrefix 
 /DataAnalysis/data/STAR/pipelines/prefix --readFilesIn /DataAnalysis/data/STAR/pipelines/2020_278C_R1.fastq /DataAnalysis/data/STAR/pipelines/2020_278C_R2.fastq
+
+###Method 2: Direct method 
+
+ cd /DataAnalysis/data/pipelines/kallisto/
+ $./kallisto index -i /DataAnalysis/data/kallisto_test/transcripts.idx /DataAnalysis/data/kallisto_test/Homo_sapiens.GRCh38.cdna.all.fa.gz 
+ $./kallisto quant -i /DataAnalysis/data/kallisto_test/transcripts.idx -o /DataAnalysis/data/kallisto_test/ -b 100 
+ /DataAnalysis/data/kallisto_test/2020_288_R1.fastq.gz /DataAnalysis/data/kallisto_test/2020_288_R2.fastq.gz 
+
+
+
