@@ -38,3 +38,11 @@ git clone https://github.com/alexdobin/STAR.git
 # Compile
 cd STAR/source
 make STAR
+
+#RUN the STAR
+$./STAR --runThreadN 8 --runMode genomeGenerate --genomeDir /DataAnalysis/data/test/ --genomeFastaFiles 
+/DataAnalysis/data/test/Homo_sapiens.GRCh38.dna.toplevel.fa --sjdbGTFfile /DataAnalysis/data/test/Homo_sapiens.GRCh38.100.gtf 
+--sjdbOverhang 100
+
+$./STAR --runMode alignReads --outSAMtype BAM Unsorted --genomeDir /DataAnalysis/data/STAR/pipelines/ --outFileNamePrefix 
+/DataAnalysis/data/STAR/pipelines/prefix --readFilesIn /DataAnalysis/data/STAR/pipelines/2020_278C_R1.fastq /DataAnalysis/data/STAR/pipelines/2020_278C_R2.fastq
