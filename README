@@ -56,5 +56,9 @@ $./STAR --runMode alignReads --outSAMtype BAM Unsorted --genomeDir /DataAnalysis
  $./kallisto quant -i /DataAnalysis/data/kallisto_test/transcripts.idx -o /DataAnalysis/data/kallisto_test/ -b 100 
  /DataAnalysis/data/kallisto_test/2020_288_R1.fastq.gz /DataAnalysis/data/kallisto_test/2020_288_R2.fastq.gz 
 
+###########
+#Remove rRNA contamination
+tagdust -t 8 -1 R:N -o /DataAnalysis/tagduest-analysis/ -ref /DataAnalysis/tagduest-analysis/rRNA.txt -fe 2 /DataAnalysis/tagduest-analysis/270_R1.fastq 
 
+./bbduk.sh -Xmx64g in1=/DataAnalysis/test-star/output_READ1.fastq in2=/DataAnalysis/test-star/output_READ2.fastq out=/DataAnalysis/test-star/trimmed-ribo.fa ref=/DataAnalysis/test-star/mart_export.txt 
 
