@@ -60,5 +60,10 @@ $./STAR --runMode alignReads --outSAMtype BAM Unsorted --genomeDir /DataAnalysis
 #Remove rRNA contamination
 tagdust -t 8 -1 R:N -o /DataAnalysis/tagduest-analysis/ -ref /DataAnalysis/tagduest-analysis/rRNA.txt -fe 2 /DataAnalysis/tagduest-analysis/270_R1.fastq 
 
+OR
+
+tagdust  -1 O:N -2 B:ACAGAT,ATCGTG,CACGAT,CACTGA,CTGACG,GAGTGA,GTATAC,TCGAGC-o /DataAnalysis/tagduest-analysis/ -ref /DataAnalysis/tagduest-analysis/mart_export.txt -fe 2 /DataAnalysis/tagduest-analysis/270_R1.fastq
+
+
 ./bbduk.sh -Xmx64g in1=/DataAnalysis/test-star/output_READ1.fastq in2=/DataAnalysis/test-star/output_READ2.fastq out=/DataAnalysis/test-star/trimmed-ribo.fa ref=/DataAnalysis/test-star/mart_export.txt 
 
