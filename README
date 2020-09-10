@@ -1,3 +1,8 @@
+#Prepare the data
+#marge the parts of the samples
+$cat *R1_001.fastq.gz >578_R1.fastq.gz
+$cat *R2_001.fastq.gz >578_R2.fastq.gz
+
 Method 1. Alignment based Method
 
 1. Prepare downstream with downloading all required softwares and pipelines.
